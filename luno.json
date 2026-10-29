@@ -1,0 +1,28 @@
+{
+  "name": "GameTheoryStory",
+  "version": "1.1.0",
+  "description": "Animated explainer: a prisoner's dilemma (dollar in the bucket) and how an escrow broker dissolves it. Scripted timeline, SVG stage, voiceover-ready captions.",
+  "type": "luno-web-app",
+  "mainClass": "GameTheoryStory",
+  "entrypoint": {
+    "file": "js/GameTheoryStory.js",
+    "class": "GameTheoryStory",
+    "method": "run"
+  },
+  "main": [
+    "js/GameTheoryStory.js"
+  ],
+  "library": [
+    "DomBasics.js",
+    "UITools.js"
+  ],
+  "styles": [
+    "css/basicsWithDialogBox.css"
+  ],
+  "processedCountSinceCheckpoint": 2,
+  "pendingCheckpointDescription": "First full build: 4-act timeline, Mr. Crane + Barnaby Quill, art slots for Nano Banana",
+  "changedMethods": {
+    "js/GameTheoryStory.js": "2026-10-29T05:31:30.380Z",
+    "luno.json": "2026-10-29T05:31:30.380Z"
+  }
+}
