@@ -29,6 +29,13 @@ class GameTheoryStory {
     sign: { name:'Everyone signs', pay:'+$3.75 each', test:'Switch to refusing, alone: −$3.75 loss', ok:true, badge:'RULE EQUILIBRIUM (Stable)' }
   };
   static ART = { crane:'', barnaby:'', narrator:'', stage:'' };
+  static PROMPTS = {
+    style: 'Modern flat vector illustration, clean lines, friendly infographic style, soft pastel palette, minimalist tech aesthetic.',
+    crane: 'A wealthy, curious eccentric gentleman in a tailored plum coat, top hat, monocle, sophisticated demeanor.',
+    barnaby: 'An energetic traveling contract broker with a fedora, bowtie, pocket watch, holding a leather ledger and briefcase.',
+    narrator: 'A vintage studio microphone icon or a modern broadcast narrator silhouette on a neutral slate backdrop.',
+    stage: 'A quiet, modern open plaza with soft geometric tiling, warm ambient light, clean minimalist background.'
+  };
   static FACES = {
     narrator: '<svg viewBox="0 0 72 72"><rect width="72" height="72" fill="#334155"/><rect x="29" y="14" width="14" height="26" rx="7" fill="#e2e8f0"/><path d="M22 34 Q22 50 36 50 Q50 50 50 34" fill="none" stroke="#e2e8f0" stroke-width="3"/><rect x="34" y="50" width="4" height="10" fill="#e2e8f0"/><rect x="26" y="60" width="20" height="4" rx="2" fill="#e2e8f0"/></svg>',
     crane: '<svg viewBox="0 0 72 72"><rect width="72" height="72" fill="#3b4a63"/><rect x="22" y="56" width="28" height="16" fill="#6b2d5c"/><circle cx="36" cy="40" r="16" fill="#f1c27d"/><rect x="25" y="12" width="22" height="18" rx="2" fill="#111"/><rect x="18" y="29" width="36" height="4" rx="2" fill="#111"/><circle cx="43" cy="38" r="5" fill="none" stroke="#d4a017" stroke-width="1.5"/><circle cx="30" cy="38" r="1.6" fill="#222"/><circle cx="43" cy="38" r="1.6" fill="#222"/><path d="M30 48 Q37 52 43 47" stroke="#7a3b2e" fill="none" stroke-width="1.6"/></svg>',
@@ -255,9 +262,9 @@ class GameTheoryStory {
       bg: svg.querySelector('#gts-bg'), stabilityBadge: svg.querySelector('#gts-stability') };
 
     if (GameTheoryStory.ART.stage) this.s.bg.setAttribute('href', GameTheoryStory.ART.stage);
-    const P = GameTheoryStory.PROMPTS;
+    const P = GameTheoryStory.PROMPTS || {};
     this.el.prompts.innerHTML = `<b>Art generation prompts:</b>
-      <code>${P.style}</code>` + ['crane', 'barnaby', 'narrator', 'stage'].map(k => `<b>${k}</b><code>${P[k]}</code>`).join('');
+      <code>${P.style || 'Default clean vector style'}</code>` + ['crane', 'barnaby', 'narrator', 'stage'].map(k => `<b>${k}</b><code>${P[k] || 'Illustration of ' + k}</code>`).join('');
   }
 
   _labelModes() {
