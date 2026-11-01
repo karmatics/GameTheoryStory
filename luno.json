@@ -19,11 +19,15 @@
   "styles": [
     "css/basicsWithDialogBox.css"
   ],
-  "processedCountSinceCheckpoint": 0,
+  "processedCountSinceCheckpoint": 4,
   "pendingCheckpointDescription": "Clean working tree",
   "changedMethods": {
     "js/GameTheoryStory.js": "2026-10-31T05:28:42.229Z",
-    "luno.json": "2026-10-29T05:31:30.380Z"
+    "luno.json": "2026-10-29T05:31:30.380Z",
+    "Luno/core/LunoServer.js": "2026-11-01T06:31:12.982Z",
+    "Luno/app/ClientApp.js": "2026-11-01T06:31:12.982Z",
+    "Luno/app/LunoDeployEngine.js": "2026-11-01T06:31:12.982Z",
+    "Luno/app/ClientAppUI.js": "2026-11-01T06:31:12.982Z"
   },
   "lastCheckpointTime": "2026-10-31T06:19:07.791Z"
 }
